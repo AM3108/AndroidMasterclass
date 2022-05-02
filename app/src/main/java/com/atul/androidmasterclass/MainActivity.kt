@@ -1,7 +1,7 @@
 package com.atul.androidmasterclass
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.atul.androidmasterclass.databinding.ActivityMainBinding
@@ -13,9 +13,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         viewModel = ViewModelProvider(this)[MainActivityViewModel::class.java]
-        binding.txtCount.text = viewModel.getCurrentCount().toString()
+        viewModel.countData.observe(this, {
+            binding.txtCount.text = it.toString()
+        })
         binding.btnClick.setOnClickListener {
-            binding.txtCount.text = viewModel.getUpdatedCount().toString()
+            viewModel.getUpdatedCount()
         }
     }
 }
