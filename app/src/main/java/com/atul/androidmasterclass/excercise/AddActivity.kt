@@ -16,14 +16,7 @@ class AddActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_add)
         viewModelFactory = AddActivityViewModelFactory(125)
         viewModel = ViewModelProvider(this, viewModelFactory)[AddActivityViewModel::class.java]
-        viewModel.countData.observe(this, {
-            binding.txtValue.text = it.toString()
-        })
-        binding.btnAddValue.setOnClickListener {
-            if(binding.edtEnterValue.text.isNotEmpty())
-            {
-                viewModel.updatedCount(binding.edtEnterValue.text.toString()).toString()
-            }
-        }
+        binding.addViewModel = viewModel
+        binding.lifecycleOwner = this
     }
 }

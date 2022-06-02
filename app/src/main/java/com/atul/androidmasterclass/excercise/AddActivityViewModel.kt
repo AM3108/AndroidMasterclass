@@ -12,8 +12,10 @@ class AddActivityViewModel(startingTotal: Int) : ViewModel() {
     init {
         count.value = startingTotal
     }
+    val inputText = MutableLiveData<String>()
 
-    fun updatedCount(value: String){
-        count.value = count.value?.plus(value.toInt())
+    fun updatedCount(){
+        val intInputText = inputText.value!!.toInt()
+        count.value = count.value?.plus(intInputText)
     }
 }
