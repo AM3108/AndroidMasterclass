@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Android Masterclass</string>
     <string name="download_user_data">Download User Data</string>
+    <string name="download_user_data_parallel">Download User Data Parallel</string>
+    <string name="download_user_data_main">Download User Data Main</string>
     <string name="click_main_thread">Click Main Thread</string>
     <string name="click_background_thread">Click Background Thread</string>
     <string name="count">Count</string>
