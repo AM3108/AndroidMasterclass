@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Android Masterclass</string>
     <string name="download_user_data">Download User Data</string>
+    <string name="click_main_thread">Click Main Thread</string>
+    <string name="click_background_thread">Click Background Thread</string>
     <string name="count">Count</string>
+    <string name="thread_name">Thread Name</string>
     <string name="click_here">Click Here</string>
+    <string name="coroutines_download_user_data">Coroutines Download User Data</string>
+    <string name="stop">Stop</string>
 </resources>
