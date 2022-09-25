@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidMasterclass">
         <activity
-            android:name=".asyncawait.AsyncAwaitActivity"
+            android:name=".structuredconcurency.StructuredActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,16 +19,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".switchthread.SwitchThreadActivity"
+            android:name=".unstructureconcurrency.UnstructuredActivity"
             android:exported="true">
 
         </activity>
         <activity
+            android:name=".asyncawait.AsyncAwaitActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".switchthread.SwitchThreadActivity"
+            android:exported="true" />
+        <activity
             android:name=".exercise1.ExcersiseOneActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
